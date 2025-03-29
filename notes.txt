@@ -1,0 +1,14 @@
+NEXTJS
+> npx create-next-app@latest
+
+
+PRISMA
+npm i D prisma
+npm i @prisma/client
+
+REACT-HOOK-FORM
+npm i react-hook-form  @hookform/resolvers zop
+
+npx prisma init --datasource sqlite
+*** .env, prisma/schema.prisma
+***  Add models to above

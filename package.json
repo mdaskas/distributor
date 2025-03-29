@@ -9,7 +9,11 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"prisma:seed": "npx prisma db seed",
+		"prisma:migrate": "npx prisma migrate dev",
+		"prisma:studio": "npx prisma studio",
+		"prisma:generate": "npx prisma generate"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^4.1.3",

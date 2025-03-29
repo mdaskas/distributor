@@ -21,13 +21,30 @@ model Product {
   cost              Float // Cost of the product
   productCategoryId Int
   productCategory   ProductCategory @relation(fields: [productCategoryId], references: [id])
-  createdAt         DateTime        @default(now()) // Timestamp when the product was created
-  updatedAt         DateTime        @updatedAt // Timestamp when the product was last updated
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
 }
 
 model ProductCategory {
-  id       Int       @id @default(autoincrement())
-  code     String    @unique
-  name     String?
-  products Product[] // This will create a one-to-many relationship with the Product model
+  id        Int       @id @default(autoincrement())
+  code      String    @unique
+  name      String?
+  products  Product[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  code      String   @unique
+  name      String
+  email     String
+  phone     String
+  address1  String
+  address2  String?
+  city      String
+  state     String
+  zipCode   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
