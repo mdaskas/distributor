@@ -12,3 +12,8 @@ npm i react-hook-form  @hookform/resolvers zop
 npx prisma init --datasource sqlite
 *** .env, prisma/schema.prisma
 ***  Add models to above
+
+
+npm i tailwind-merge
+npm i class-variance-authority
+npm i clsx
